@@ -61,7 +61,64 @@
 
     .logline { display:flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .logline:last-child { border-bottom: 0; }
-  </style>
+  
+
+/* ===== Light, fresh theme override ===== */
+body { background: #f5f7fb; color: #0f172a; }
+
+.sub, .small, .kpi .label { color: #64748b; }
+
+.card {
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.pill {
+  border: 1px solid rgba(2, 132, 199, 0.18);
+  background: rgba(2, 132, 199, 0.08);
+  color: #075985;
+}
+
+.quote { color: #0f172a; }
+.headline { color: #0f172a; }
+.big { color: #0f172a; }
+
+button { box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08); }
+
+.primary {
+  background: linear-gradient(180deg, rgba(56,189,248,0.95), rgba(34,211,238,0.95));
+  color: #06202a;
+}
+
+.ghost {
+  background: rgba(2, 132, 199, 0.06);
+  border: 1px solid rgba(2, 132, 199, 0.18);
+  color: #0f172a;
+}
+
+/* '마셨음' 버튼도 경고빨강 대신 중립 톤다운 */
+.danger {
+  background: rgba(148, 163, 184, 0.35);
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+}
+
+.logline { border-bottom: 1px solid rgba(15, 23, 42, 0.08); }
+
+/* date input 같은 입력창도 라이트로 */
+input[type="date"]{
+  background: rgba(255,255,255,0.95) !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(15,23,42,0.10) !important;
+}
+
+
+
+</style>
+
+
+
 </head>
 <body>
   <header>
@@ -73,6 +130,26 @@
     <section class="card">
       <div class="row">
         <div class="kpi">
+<section class="card">
+  <div class="headline">금주 시작일</div>
+  <input
+    type="date"
+    id="startDateInput"
+    style="
+      margin-top:10px;
+      padding:10px;
+      border-radius:10px;
+      border:none;
+      background:#2a2e2c;
+      color:#f2f3f2;
+      width:100%;
+    "
+  />
+  <div class="small" style="margin-top:8px;">
+  </div>
+</section>
+
+
           <div class="label">연속 금주</div>
           <div class="value"><span id="streak">0</span><span class="unit">일</span></div>
         </div>
