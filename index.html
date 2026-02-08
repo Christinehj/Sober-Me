@@ -12,13 +12,18 @@
 
   <style>
     :root { font-family: -apple-system, system-ui, Segoe UI, Roboto, Arial, sans-serif; }
-    body { margin: 0; background: #0b0b0b; color: #f4f4f4; }
+    body { margin: 0; background: #1c1f1d; color: #f2f3f2; }
+
     header { padding: 18px 16px 10px; }
     h1 { margin: 0; font-size: 20px; font-weight: 800; }
     .sub { color: #bdbdbd; font-size: 13px; margin-top: 6px; line-height: 1.4; }
 
     .wrap { padding: 14px 16px 22px; display: grid; gap: 12px; }
-    .card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10); border-radius: 16px; padding: 14px; }
+.card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
     .row { display: flex; gap: 10px; flex-wrap: wrap; }
     .kpi { flex: 1; min-width: 140px; }
     .kpi .label { color: #bdbdbd; font-size: 12px; }
@@ -30,12 +35,25 @@
       padding: 14px 14px; font-weight: 800; font-size: 16px;
       width: 100%; cursor: pointer;
     }
-    .primary { background: #ffffff; color: #111; }
-    .danger { background: #ff3b30; color: #fff; }
+.primary {
+  background: #7fa68a;
+  color: #0f1a14;
+}
+
+.danger {
+  background: #a45a5a;
+  color: #fff;
+}
+
     .ghost { background: rgba(255,255,255,0.10); color: #fff; border: 1px solid rgba(255,255,255,0.16); }
     .btnrow { display: grid; gap: 10px; }
 
-    .pill { font-size: 12px; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); color: #eaeaea; }
+    .pill { font-size: 12px; padding: 4px 10px; border-radius: 999px;  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.10);
+  color: #e8ebe9; }
+
+
+
     .small { color: #bdbdbd; font-size: 12px; line-height: 1.5; }
     .headline { font-weight: 900; font-size: 18px; }
     .big { font-weight: 950; font-size: 28px; line-height: 1.2; }
