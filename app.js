@@ -200,8 +200,7 @@ function render() {
   }
 }
 
-document.getElementById("btnSober").addEventListener("click", () => {
-  const state = loadState();
+
 
   // 첫 금주 시작일 세팅 (처음으로 sober 찍는 날)
   if (!state.soberStartDate) state.soberStartDate = todayISO();
@@ -231,3 +230,20 @@ document.getElementById("btnNewLine").addEventListener("click", () => {
 });
 
 render();
+
+const startDateInput = document.getElementById("startDateInput");
+if (startDateInput) {
+  const state = loadState();
+  if (state.soberStartDate) {
+    startDateInput.value = state.soberStartDate;
+  }
+
+  startDateInput.addEventListener("change", (e) => {
+    const newDate = e.target.value;
+    const state = loadState();
+    state.soberStartDate = newDate;
+    saveState(state);
+    render();
+  });
+}
+
